@@ -40,15 +40,17 @@ sudo apt install build-essential
 ```
 
 ### Install OpenPLC
-Follow the instructions on the OpenPLC website to install the OpenPLC Editor and runtime.
+Follow the instructions on the OpenPLC website to install the OpenPLC Editor and runtime.<br>
+[OpenPLC Editor](https://autonomylogic.com/docs/installing-openplc-editor/)<br>
+[OpenPLC Runtime](https://autonomylogic.com/docs/installing-openplc-runtime-on-linux-systems/)
 
 ## Building the Project
-1. Navigate to the project directory:
+### Navigate to the project directory:
 ```sh
 cd hyrail-plc-project
 ```
 
-2. Compile the project using the Makefile:
+### Compile the project using the Makefile:
 ```sh
 make
 ```
@@ -60,7 +62,7 @@ gcc -Wall -c src/hyrail_control.c -o src/hyrail_control.o
 gcc -Wall -o hyrail-plc src/main.o src/hyrail_control.o
 ```
 
-3. Run the compiled program:
+### Run the compiled program:
 ```sh
 ./hyrail-plc
 ```
