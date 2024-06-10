@@ -53,7 +53,32 @@ cd hyrail-plc-project
 make
 ```
 
+When you compile the project using the `make` command, you should see the following output in your terminal:
+```
+gcc -Wall -c src/main.c -o src/main.o
+gcc -Wall -c src/hyrail_control.c -o src/hyrail_control.o
+gcc -Wall -o hyrail-plc src/main.o src/hyrail_control.o
+```
+
 3. Run the compiled program:
 ```sh
 ./hyrail-plc
 ```
+
+When you run the compiled program using `./hyrail-plc`, you should see continuous output reflecting the main loop operations. Here’s what the output should look like:
+```
+Hyrail PLC System Initialized
+System Initialization Complete
+Reading Inputs
+Processing Logic
+Writing Outputs
+Reading Inputs
+Processing Logic
+Writing Outputs
+Reading Inputs
+Processing Logic
+Writing Outputs
+...
+```
+
+This output will repeat indefinitely, simulating the continuous operation of a PLC system. Each step corresponds to a function call within the main loop of the program.
